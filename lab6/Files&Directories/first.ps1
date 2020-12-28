@@ -2,7 +2,7 @@
 New-Item -Path 'C:\LAB6' -ItemType Directory 
 
 ## переходим в папку LAB6
-Set-Location -Path C:\LAB6 \PathThru
+Set-Location -Path C:\LAB6
 
 ## получение версии ОС (способ 1)
 (Get-ComputerInfo).OsVersion    # долгий вариант, так как (Get-ComputerInfo) получает сначала всю информацию, а потом берёт поле OsVersion
@@ -11,7 +11,7 @@ Set-Location -Path C:\LAB6 \PathThru
 [System.Environment]::OSVersion.Version
 
 ## запись версии ОС в текстовый файл OsVersion.txt
-[System.Envitonment]::OSVersion.Version > OSVersion.txt
+[System.Environment]::OSVersion.Version > OSVersion.txt
 
 ## запись информации о используемой и занятой памяти в ОС в текстовый файл Memory.txt
 Get-ComputerInfo -Property *mem* > Memory.txt
